@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punjab Photo Gallery & Landmark Perspectives</title>
+    <link rel="icon" type="image/x-icon" href="img.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-header-banner {
+            background: linear-gradient(rgba(145, 23, 23, 0.88), rgba(40, 5, 5, 0.92)), url('Hero.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 55px 20px 45px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-header-banner h1 {
+            font-size: 38px;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+
+        .gallery-header-banner p {
+            font-size: 17px;
+            color: #fce7e7;
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <ul class="ul">
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='About.html'>About</a></li>
+        <li><a href='Cities.html'>Cities</a></li>
+        <li><a href='Image_gallery.html' style="background: rgba(255,255,255,0.15);">Gallery</a></li>
+        <li><a href='#Co'>Contact</a></li>
+        <li style="float:right;font-size:20px;"><a href='#'>Punjab Travel Guide</a></li>
+        <li><a href='Loginpage.html'>Login</a></li>
+    </ul>
+
+    <!-- Banner Header -->
+    <div class="gallery-header-banner">
+        <h1>Punjab Photographic Gallery</h1>
+        <p>Explore breathtaking views, sacred shrines, forts, and tranquil wetlands from all across Punjab. Have your own captures? Upload them to our community archive below!</p>
+    </div>
+
+    <!-- Community Upload Section -->
+    <section class="gallery-upload-section">
+        <div class="upload-card">
+            <div class="upload-header">
+                <span class="section-badge">Community Contributions</span>
+                <h3>Upload Your Photos to the Gallery</h3>
+                <p>Contribute your own perspectives, landmarks, or street captures to the Punjab Travel Guide gallery.</p>
+            </div>
+
+            <div class="upload-grid">
+                <!-- Drop Zone -->
+                <div class="drop-zone" id="gallery-drop-zone">
+                    <div class="drop-zone-icon">📷</div>
+                    <p class="drop-zone-text"><b>Click to browse</b> or drag & drop photo here</p>
+                    <small style="color:#777; margin-top:6px;">Supported: JPG, PNG, WEBP (Max 5MB)</small>
+                    <input type="file" id="gallery-file-input" accept="image/*" style="display:none;">
+                    <div class="preview-box" id="preview-box">
+                        <img id="preview-img" src="" alt="Photo preview">
+                    </div>
+                </div>
+
+                <!-- Fields -->
+                <div class="upload-form-fields">
+                    <div class="form-group">
+                        <label for="upload-title">Photo Title / Landmark Name</label>
+                        <input type="text" id="upload-title" placeholder="e.g. Golden Temple Night Reflection" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-city">City / Region in Punjab</label>
+                        <select id="upload-city">
+                            <option value="Amritsar">Amritsar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Anandpur Sahib">Anandpur Sahib</option>
+                            <option value="Bathinda">Bathinda</option>
+                            <option value="Fatehgarh Sahib">Fatehgarh Sahib</option>
+                            <option value="Kapurthala">Kapurthala</option>
+                            <option value="Ludhiana">Ludhiana</option>
+                            <option value="Mohali">Mohali</option>
+                            <option value="Pathankot">Pathankot</option>
+                            <option value="Patiala">Patiala</option>
+                            <option value="Ropar">Ropar (Rupnagar)</option>
+                            <option value="Other Punjab Region">Other Punjab Region</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-author">Your Name / Photographer Credit</label>
+                        <input type="text" id="upload-author" placeholder="e.g. Amanpreet Singh">
+                    </div>
+
+                    <button type="button" id="upload-submit-btn" class="upload-btn">
+                        📤 Add Photo to Gallery
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters">
+            <button type="button" class="filter-btn active" data-filter="all">All Photos</button>
+            <button type="button" class="filter-btn" data-filter="official">Official Landmarks</button>
+            <button type="button" class="filter-btn" data-filter="user">Community Uploads</button>
+        </div>
+    </section>
+
+    <!-- Main Images Grid -->
+    <div class="image_gallery">
+        <div><img src="Anandpur Sahib.jpg" alt="Anandpur Sahib"><p>Anandpur Sahib</p></div>
+        <div><img src="Attari - Wagah Border.jpg" alt="Attari - Wagah Border"><p>Attari - Wagah Border</p></div>
+        <div><img src="Baradari Gardens.jpg" alt="Baradari Gardens"><p>Baradari Gardens, Patiala</p></div>
+        <div><img src="Bathinda.jpg" alt="Bathinda"><p>Bathinda City View</p></div>
+        <div><img src="Capitol Complex.jpg" alt="Capitol Complex"><p>Capitol Complex, Chandigarh</p></div>
+        <div><img src="Chandigarh.jpg" alt="Chandigarh"><p>Open Hand Monument, Chandigarh</p></div>
+        <div><img src="Clock Tower.jpg" alt="Clock Tower"><p>Clock Tower (Ghanta Ghar), Ludhiana</p></div>
+        <div><img src="Fatehgarh Sahib.jpg" alt="Fatehgarh Sahib"><p>Gurdwara Fatehgarh Sahib</p></div>
+        <div><img src="Gobindgarh Fort.jpg" alt="Gobindgarh Fort"><p>Gobindgarh Fort, Amritsar</p></div>
+        <div><img src="Hardy's World.jpg" alt="Hardy's World"><p>Hardy's World, Ludhiana</p></div>
+        <div><img src="Jallianwala Bagh.jpg" alt="Jallianwala Bagh"><p>Jallianwala Bagh Memorial, Amritsar</p></div>
+        <div><img src="Jhajjar Bachauli.jpg" alt="Jhajjar Bachauli"><p>Jhajjar Bachauli Sanctuary</p></div>
+        <div><img src="Kapurthala.jpg" alt="Kapurthala"><p>Kapurthala Heritage</p></div>
+        <div><img src="Kathlour.jpg" alt="Kathlour"><p>Kathlour-Kushlian Sanctuary, Pathankot</p></div>
+        <div><img src="Ludhiana.jpg" alt="Ludhiana"><p>Ludhiana Metropolitan</p></div>
+        <div><img src="MOhali.jpg" alt="Mohali"><p>Mohali City Skyline</p></div>
+        <div><img src="Maharaja Ranjit Singh War Museum.png" alt="Maharaja Ranjit Singh War Museum"><p>Maharaja Ranjit Singh War Museum</p></div>
+        <div><img src="Moti Bagh Palace.jpg" alt="Moti Bagh Palace"><p>Moti Bagh Palace, Patiala</p></div>
+        <div><img src="Mukteshwar mahadev.jpg" alt="Mukteshwar Mahadev"><p>Mukteshwar Mahadev Mandir, Pathankot</p></div>
+        <div><img src="Nek Chand's Rock Garden of Chandigarh.jpg" alt="Nek Chand's Rock Garden"><p>Nek Chand's Rock Garden, Chandigarh</p></div>
+        <div><img src="PAU.jpg" alt="PAU"><p>Punjab Agricultural University, Ludhiana</p></div>
+        <div><img src="Panch mandir.jpg" alt="Panch Mandir"><p>Panch Mandir, Kapurthala</p></div>
+        <div><img src="Pathankot.jpg" alt="Pathankot"><p>Pathankot Hills & Valley</p></div>
+        <div><img src="Patiala.jpg" alt="Patiala"><p>Patiala Heritage</p></div>
+        <div><img src="Qila Mubarak.jpg" alt="Qila Mubarak"><p>Qila Mubarak, Patiala</p></div>
+        <div><img src="Ropar Archaeological Museum.jpg" alt="Ropar Archaeological Museum"><p>Ropar Archaeological Museum</p></div>
+        <div><img src="Ropar Wetland.jpg" alt="Ropar Wetland"><p>Ropar Wetland</p></div>
+        <div><img src="Ropar.jpg" alt="Ropar"><p>Ropar Sutlej River</p></div>
+        <div><img src="Sheesh Mahal.jpg" alt="Sheesh Mahal"><p>Sheesh Mahal, Patiala</p></div>
+        <div><img src="Siswan Dam.jpg" alt="Siswan Dam"><p>Siswan Dam, Mohali</p></div>
+        <div><img src="Sri Guru Teg Bahadur Sikh Museum.jpg" alt="Sri Guru Teg Bahadur Sikh Museum"><p>Sri Guru Teg Bahadur Sikh Museum</p></div>
+        <div><img src="Sukhna Lake.jpg" alt="Sukhna Lake"><p>Sukhna Lake, Chandigarh</p></div>
+        <div><img src="Takht Sri Kesgarh Sahib.jpg" alt="Takht Sri Kesgarh Sahib"><p>Takht Sri Kesgarh Sahib, Anandpur Sahib</p></div>
+        <div><img src="Virasat-e-Khalsa.jpg" alt="Virasat-e-Khalsa"><p>Virasat-e-Khalsa, Anandpur Sahib</p></div>
+        <div><img src="indus valley civilization.jpg" alt="Indus Valley Site"><p>Indus Valley Site, Ropar</p></div>
+        <div><img src="Gurudwara Sri Bhatha Sahib.jpg" alt="Gurudwara Sri Bhatha Sahib"><p>Gurudwara Sri Bhatha Sahib, Ropar</p></div>
+        <div><img src="Zakir Hussain Rose Garden.jpg" alt="Zakir Hussain Rose Garden"><p>Zakir Hussain Rose Garden, Chandigarh</p></div>
+        <div><img src="aam khaas bagh.jpg" alt="Aam Khas Bagh"><p>Aam Khas Bagh, Fatehgarh Sahib</p></div>
+        <div><img src="amritsar.jpg" alt="Amritsar"><p>Historic Amritsar City</p></div>
+        <div><img src="baba banda singh bahadur war memorial.png" alt="Baba Banda Singh Bahadur Memorial"><p>Baba Banda Singh Bahadur Memorial, Mohali</p></div>
+        <div><img src="bathinda lake.jpg" alt="Bathinda Lake"><p>Bathinda Lake</p></div>
+        <div><img src="bindra stadium.png" alt="IS Bindra Stadium"><p>I.S. Bindra Cricket Stadium, Mohali</p></div>
+        <div><img src="garden.jpg" alt="Shalimar Gardens"><p>Shalimar Gardens, Kapurthala</p></div>
+        <div><img src="gurdwara amb sahib.jpg" alt="Gurdwara Amb Sahib"><p>Gurdwara Amb Sahib, Mohali</p></div>
+        <div><img src="jyoti swaroop sahib.jpg" alt="Jyoti Swaroop Sahib"><p>Gurudwara Jyoti Swaroop Sahib</p></div>
+        <div><img src="mosque.jpg" alt="Moorish Mosque"><p>Moorish Mosque, Kapurthala</p></div>
+        <div><img src="quila mubarak.jpg" alt="Quila Mubarak Bathinda"><p>Quila Mubarak, Bathinda</p></div>
+        <div><img src="ranjit sagar dam.jpg" alt="Ranjit Sagar Dam"><p>Ranjit Sagar Dam, Pathankot</p></div>
+        <div><img src="rose garden bathinda.jpg" alt="Rose Garden Bathinda"><p>Rose Garden, Bathinda</p></div>
+        <div><img src="sangol.jpg" alt="Sanghol Excavation"><p>Sanghol Archaeological Stupa</p></div>
+        <div><img src="shahpurkhandi.webp" alt="Shahpurkandi Fort"><p>Shahpurkandi Fort, Pathankot</p></div>
+        <div><img src="sri harmander sahib.jpg" alt="Sri Harmandir Sahib"><p>Sri Harmandir Sahib (Golden Temple)</p></div>
+        <div><img src="takht sri damdama sahib.png" alt="Takht Sri Damdama Sahib"><p>Takht Sri Damdama Sahib, Bathinda</p></div>
+    </div>
+    <br>
+
+    <!-- Communications / Footer -->
+    <div style="background-color: black; justify-content: center; text-align: center; padding: 25px 20px;">
+        <h4 id="Co" style="color:white; margin-bottom: 12px;">Communications:</h4>
+        <a href="https://www.instagram.com/" target="_blank"><img src="Instagram.png" alt="Instagram" style="width: 30px; height: 30px; margin-right: 10px;"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook.jpg" alt="Facebook" style="width: 30px; height: 30px; margin-right: 10px;"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="X.png" alt="Twitter" style="width: 30px; height: 30px; margin-right: 10px;"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="Youtube.jpg" alt="YouTube" style="width: 30px; height: 30px; margin-right: 10px;"></a>
+        <br><br>
+        <p style="color:white; margin:0;">&copy; 2026 Punjab Tourism. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
